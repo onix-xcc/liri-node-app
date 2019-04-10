@@ -1,0 +1,23 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "LIRI as in a spoof of Apple's SIRI. Stands for Language Interpretation and Recognition Interface. It is a node app that takes parameters via cmd line and returns data to you.",
+  "main": "keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onix-xcc/liri-node-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onix-xcc/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/onix-xcc/liri-node-app#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.0.7"
+  }
+}
