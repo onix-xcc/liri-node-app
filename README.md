@@ -62,7 +62,20 @@ Event Date: 06/07/2019
 -->
 
 # Screenshots
+1. node liri.js prompt
+<img width="287" alt="Prompt" src="https://raw.githubusercontent.com/onix-xcc/liri-node-app/master/screenshots/liri1.png">
 
+2. node liri.js concert-this
+<img width="287" alt="concertThis" src="https://raw.githubusercontent.com/onix-xcc/liri-node-app/master/screenshots/liriConcert1.png">
 
+3. node liri.js spotify-this-song
+<img width="429" alt="spotifyThisSong" src="https://raw.githubusercontent.com/onix-xcc/liri-node-app/master/screenshots/liriSpotify.png">
+
+4. node liri.js movie-this
+<img width="714" alt="movieThis" src="https://raw.githubusercontent.com/onix-xcc/liri-node-app/master/screenshots/liriOMDB.png">
+
+# Acknowledgments
+
+* Big thanks to Nina (NiBeCa) and Jose (jt227b) for helping me code all this. Without you guys, I would've been stuck! 
 
 
