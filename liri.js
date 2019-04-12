@@ -160,12 +160,14 @@ function songs(song) {
 
         var results = data.tracks.items[0];
 
-        cl(`\n---------------------------------`);
-        cl(`Artist: ${results.artists[0].name}`);
-        cl(`Song: ${song.charAt(0).toUpperCase() + song.slice(1)}`);
-        cl(`Preview Link: ${results.preview_url}`);
-        cl(`Album: ${results.album.name}`);
-        cl(`----------------------------------`);
+        cl(`\n=================================
+        \n*********************************
+        \nSong: ${song.charAt(0).toUpperCase() + song.slice(1)}
+        \nArtist: ${results.artists[0].name}
+        \nAlbum: ${results.album.name}
+        \nPreview Link: ${results.preview_url}
+        \n*********************************
+        \n=================================`);
 
     });
 };
