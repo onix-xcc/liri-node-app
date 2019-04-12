@@ -117,19 +117,25 @@ function concerts(artist) {
 
                 if (results[i].venue.country === "United States") {
 
-                    cl(`\nLocation ${i+1}- In the United States
-                    \n-----------------------------------------
+                    cl(`\n*************************************
+                    \nLocation ${i+1}- In the United States
+                    \n-------------------------------------
                     \nVenue Name: ${results[i].venue.name}
                     \nVenue Location: ${results[i].venue.city}, ${results[i].venue.region}
-                    \nEvent Date: ${moment(results[i].datetime).format('L')}`);
+                    \nEvent Date: ${moment(results[i].datetime).format('L')}
+                    \n*************************************
+                    \n`);
 
                 } else if (results[i].venue.country !== "") {
 
-                    cl(`\nLocation ${i+1}- Outside the United States
-                    \n-----------------------------------------
+                    cl(`\n******************************************
+                    \nLocation ${i+1}- Outside the United States
+                    \n------------------------------------------
                     \nVenue Name: ${results[i].venue.name}
                     \nVenue Location: ${results[i].venue.city}, ${results[i].venue.country}
-                    \nEvent Date: ${moment(results[i].datetime).format('L')}`);
+                    \nEvent Date: ${moment(results[i].datetime).format('L')}
+                    \n******************************************
+                    \n`);
 
                 }
             }
@@ -145,7 +151,7 @@ function concerts(artist) {
 
 function songs(song) {
 
-    (song === "") ? song = "The Sign" : song;
+    (song === "") ? song = "All These Things That I've Done" : song;
 
     spotify.search({ type: 'track', query: song, limit: 1 }, function (err, data) {
         if (err) {
@@ -153,7 +159,7 @@ function songs(song) {
         }
 
         var results = data.tracks.items[0];
-        
+
         cl(`\n---------------------------------`);
         cl(`Artist: ${results.artists[0].name}`);
         cl(`Song: ${song.charAt(0).toUpperCase() + song.slice(1)}`);
@@ -209,3 +215,20 @@ function movies(movie) {
             }
         });
 };
+
+// ===========================
+// ***************************
+//        Text Function       
+// ***************************
+// ===========================
+
+function fileContent() {
+
+    fs.readFile("random.txt", "utf8", function (error, content) {
+        if (error) {
+            return (error);
+        }
+        var contentArr = content.split(",");
+        runSearch(contentArr[0].trim(), contentArr[1].trim());
+    });
+}
